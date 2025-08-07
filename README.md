@@ -117,8 +117,4 @@ Purvi Agarwal
 GitHub
 LinkedIn
 
-yaml
-Copy
-Edit
-
 
