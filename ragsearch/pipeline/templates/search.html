@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAG Search</title>
+</head>
+<body>
+    <h1>🔍 RAG Hybrid Search</h1>
+    
+    <form method="GET" action="{% url 'search' %}">
+        <input type="text" name="q" placeholder="Enter your query..." value="{{ query }}">
+        <button type="submit">Search</button>
+    </form>
+
+    {% if query %}
+        <h2>Results for: "{{ query }}"</h2>
+        <ul>
+            {% for result in results %}
+                <li>
+                    <strong>{{ result.title }}</strong><br>
+                    <em>Score: {{ result.score|floatformat:2 }}</em>
+                </li>
+            {% empty %}
+                <li>No results found.</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

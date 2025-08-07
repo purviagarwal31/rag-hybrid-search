@@ -1,0 +1,9 @@
+django
+pandas
+numpy
+faiss-cpu
+sentence-transformers
+rank_bm25
+openai
+scikit-learn
+tqdm
